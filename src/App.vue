@@ -1,18 +1,13 @@
 <template>
-  <div id="test">hello</div>
+  <g-button disabled>click</g-button>
 </template>
 
 <script>
+import GButton from '../package/button'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    GButton
+  }
 }
 </script>
-
-<style lang="less" scoped>
-  #test {
-    width: 300px;
-    height: 300px;
-    border: 1px solid black;
-  }
-</style>
-

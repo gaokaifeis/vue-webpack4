@@ -49,6 +49,9 @@ const commonConfig = {
     path: path.resolve(__dirname, '../dist'),
     filename: '[name].bundle.js'
   },
+  resolve: {
+    extensions: ['.js', '.json', '.vue']
+  },
   module: {
     rules: [
       {
@@ -59,10 +62,7 @@ const commonConfig = {
         test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
+          loader: 'babel-loader'
         }
       },
       {
@@ -82,6 +82,12 @@ const commonConfig = {
         use: {
           loader: 'file-loader'
         }
+      },
+      {
+        enforce: 'pre',
+        test: /\.(js|vue)$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
       }
     ]
   },
