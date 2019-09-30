@@ -6,8 +6,10 @@
       "targets": {
         "chrome": "75"
       }
-    }]
-  ],
-  "plugins": ["transform-vue-jsx"]
+    }],
+    "@vue/babel-preset-jsx"
+  ]
+  // ,
+  // "plugins": ["transform-vue-jsx"]
   // "plugins": ["@babel/plugin-syntax-dynamic-import"]
 }
